@@ -10,11 +10,11 @@ var body = page.GetElementById('body');
 var managebar = new actionBar(header);
 var appOpen = new kernel();
 
-appOpen.onOpen(function(app)) {
+appOpen.onOpen(function(app) {
   managebar.setTitle(app.Name);
   storage.appOpen = app.Name;
   body.innerHtml = new File(app.filePath).readIn
-};
+});
 
 appOpen.onClose((function(app)) {
   managebar.setTitle('Metalbird');
